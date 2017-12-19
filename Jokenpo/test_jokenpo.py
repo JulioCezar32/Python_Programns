@@ -1,29 +1,26 @@
 import unittest
 from jokenpo import Jokempo
+import random
 
-
+    
 class TestJokempo(unittest.TestCase):
 
     def setUp(self):
-        self.jog_1 = 'stone'
-        self.jog_2 = 'scissor'
-        self.jog_3 = 'paper'
+        self.list = ['stone', 'scissor', 'paper']
 
-    def test_paper(self):
-        self.assertEqual('Win', Jokempo.paper(self.jog_1))
-        self.assertEqual('Lose', Jokempo.paper(self.jog_2))
-        self.assertEqual('Draw',Jokempo.paper(self.jog_3))
+        x = random.choice(self.list)
+        y = random.choice(self.list)
+        self.jog_1 = Jokempo(x, y)
+        self.jog_2 = Jokempo('stone', 'stone')
 
-    def test_stone(self):
-        self.assertEqual('Win', Jokempo.stone(self.jog_2))
-        self.assertEqual('Lose', Jokempo.stone(self.jog_3))
-        self.assertEqual('Draw',Jokempo.stone(self.jog_1))
+    def test_1(self):
+        self.assertEqual('Draw', self.jog_1.play())
 
-    def test_scissor(self):
-        self.assertEqual('Win', Jokempo.scissor(self.jog_3))
-        self.assertEqual('Lose', Jokempo.scissor(self.jog_1))
-        self.assertEqual('Draw', Jokempo.scissor(self.jog_2))
+    def test_2(self):
+        self.assertEqual('Draw', self.jog_2.play())
 
+    def test_3(self):
+        self.assertEqual('Draw', self.jog_2.play())
 
-if __name__ =='__main__':
+if __name__ == '__main__':
     unittest.main()
