@@ -2,7 +2,7 @@ import unittest
 from jokenpo import Jokempo
 import random
 
-    
+
 class TestJokempo(unittest.TestCase):
 
     def setUp(self):
