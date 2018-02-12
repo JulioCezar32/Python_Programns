@@ -23,5 +23,5 @@ class Fibonacci:
 
 
 variable = Fibonacci(x)
-
+variable.fibonacci()
 print(variable)
