@@ -1,38 +1,37 @@
 #tris program is to be used to provide you RSG(Rendimento Semestral Global)
-#O calculo é feito com base nas notas das disciplinas e seu determinado peso, variando de 0-5
-
+#The calculation is done based in your results in each subject applying the respective weight
 
 x = int(input("Report the number of subjects you did \n"))
 result = 0
 heights = 0
-def conceito(nota):
-    while nota > 100 or nota < 0:
-        print("Nota invalida\n")
-        nota = int(input("Digite novamente uma nota válida\n"))
-    if nota >= 90:
+def concept(note):
+    while note > 100 or note < 0:
+        print("Invalid note\n")
+        note = int(input("Type again your note\n"))
+    if note >= 90:
         return 5
-    elif nota >= 80:
+    elif note >= 80:
         return 4
-    elif nota >= 70:
+    elif note >= 70:
         return 3
-    elif nota >= 60:
+    elif note >= 60:
         return 2
-    elif nota >= 40:
+    elif note >= 40:
         return 1
     else:
         return 0
 def credito(carga):
     while carga > 60 or carga < 20:
-        print("Carga horária inválida\n")
-        carga = int(input("Digite novamente uma carga horária válida\n"))
+        print("Invalid course load \n")
+        carga = int(input("Type again a valid course load\n"))
     return carga
 for subject in range(x):
     a = int(input("Insert the number of credits of the subject number {0}\n".format(subject + 1)))
     valor_credito = credito(a)
     b = int(input("Insert the note obteined into subject number {0}\n".format(subject + 1)))
-    valor_conceito = conceito(b)
+    valor_concept = concept(b)
 
-    result = result + a * valor_conceito
+    result = result + a * valor_concept
     heights = heights + a
 RSG = result/heights
-print("You RSG in this semestre is {0}\n".format(RSG)) 
+print("You RSG in this semestre is {0}\n".format(RSG))
