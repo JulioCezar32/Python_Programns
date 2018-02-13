@@ -1,8 +1,8 @@
 # project to start use python on the day by day
 # this code only can be writen in english language
 
-x = int(input("Insert the number of interaction to fibonacci \n"))
-
+#x = int(input("Insert the number of interaction to fibonacci \n"))
+x = 3
 class Fibonacci:
 
     def __init__(self, x):
