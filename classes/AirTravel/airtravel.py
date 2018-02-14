@@ -37,9 +37,11 @@ class Flight:
     #the model of seat is row plus letter of seat ex: '5F'
         row, seats = self._aircraft.seating_plan()
         #verify if a row or a seat exist
-        if seat[:-1] not in seats:
+        if seat[:-1] not in row:
             raise ValueError("Invalid row number '{}'".format(seat[:-1]))
 
+        if seat[-1:] not in seats:
+            raise ValueError("Invalid seat letter '{}'") 
 
 class Aircraft:
 
