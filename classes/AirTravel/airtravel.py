@@ -17,5 +17,29 @@ class Flight:
     def number(self):
         return self._number
 
+    def airline(self):
+        return self._number[:2]
+
     def __str__(self):
         return "Your Flight Number is {0}".format(self._number)
+
+
+class Aircraft:
+
+    def __init__(self, registration, model, num_rows, num_seats_per_row):
+        self._registration = registration
+        self._model = model
+        self._num_seats = num_rows
+        self._num_seats_per_row =  num_seats_per_row
+
+    def registration(self):
+        return self._registration
+
+    def model(self):
+        return self._model
+
+    def num_seats(self):
+        return self._model * self._num_sets_per_row
+
+    def seating_plan(self):
+        return (range(1,self._num_seats_per_row + 1),"ABCDEFGHIJ"[:self._num_seats_per_row + 1])
