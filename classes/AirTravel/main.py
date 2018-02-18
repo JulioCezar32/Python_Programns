@@ -1,7 +1,7 @@
 from airtravel import Flight
 from airtravel import Aircraft
 
-possible_flights = ['joke', 'AP564', '23' , 'casa']
+possible_flights = {'joke':, 'AP564', '23' , 'casa']
 for flight in possible_flights:
     try:
         result = Flight(flight)
