@@ -1,4 +1,4 @@
-# create a jokempo class
+# create a jokenpo class
 import random
 
 class Jokenpo:
