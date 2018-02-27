@@ -4,3 +4,4 @@ area = CalculaArea()
 
 def DeveRetornarIvalido():
     assertequals(area.validaobjeto('cicle'),'Valido')
+gdsfgdfsgsdgsdgsdg
