@@ -5,7 +5,7 @@ class Jokenpo:
         self._jog_1 = jog_1
         self._jog_2 = jog_2
 
-    def tipo_valido(jog_1,jog_2):
+    def tipo_valido(self, jog_1,jog_2):
 
         tipos = ['pedra','papel','tesoura']
 
@@ -14,7 +14,7 @@ class Jokenpo:
         else:
             return 'invalido'
 
-    def result(jog_1,jog_2):
+    def result(self, jog_1, jog_2):
         if jog_1 == jog_2:
             return 'empate'
 
